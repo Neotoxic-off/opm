@@ -1,0 +1,11 @@
+{
+    "packages" : [
+        {
+            "name" : "Abstrakt",
+            "method" : "git clone",
+            "source" : "https://github.com/Neotoxic-off/Abstrakt",
+            "build" : "cd Abstrakt ; make"
+        }
+    ]
+}
+
