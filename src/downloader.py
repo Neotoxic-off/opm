@@ -1,7 +1,8 @@
 import subprocess
 
 class Downloader:
-    def __init__(self, packages):
+    def __init__(self, logs, packages):
+        self.logs = logs
         self.packages = packages
     
         self.download()
@@ -9,7 +10,7 @@ class Downloader:
     def download(self): 
         if (len(self.packages) > 0):
             for i in self.packages:
-                print("==> downloading {}".format(i["name"]))
+                self.logs.action("downloading {}".format(i["name"]))
                 child = subprocess.Popen(
                     "{} {}".format(i["method"], i["source"]),
                     stdout = subprocess.PIPE,
@@ -18,8 +19,8 @@ class Downloader:
                     universal_newlines = True
                 )
                 result = child.communicate()
-                print(" -- downloaded")
-                print("==> building {}".format(i["name"]))
+                self.logs.success("downloaded")
+                self.logs.action("building {}".format(i["name"]))
                 child = subprocess.Popen(
                     "{}".format(i["build"]),
                     stdout = subprocess.PIPE,
