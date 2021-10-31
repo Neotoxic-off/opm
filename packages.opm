@@ -5,6 +5,18 @@
             "method" : "git clone",
             "source" : "https://github.com/Neotoxic-off/Abstrakt",
             "build" : "cd Abstrakt ; make"
+        },
+        {
+            "name" : "Sob",
+            "method" : "git clone",
+            "source" : "https://github.com/Neotoxic-off/sob",
+            "build" : "cd sob"
+        },
+        {
+            "name" : "nconfig",
+            "method" : "git clone",
+            "source" : "https://github.com/Neotoxic-off/nconfig",
+            "build" : "cd nconfig"
         }
     ]
 }

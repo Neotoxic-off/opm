@@ -43,5 +43,6 @@ class Parser:
                     package_configuration[requirement] = package[requirement]
                 self.packages["packages"].append(package_configuration)
                 self.logs.success("{} extracted".format(package_configuration["name"]))
+                package_configuration = {}
             self.logs.success("packages extracted: {}".format(len(self.packages["packages"])))
     
