@@ -1,6 +1,27 @@
 # opm
 Own Package Manager
 
+## Download
+
+```
+git clone https://github.com/Neotoxic-off/opm
+cd opm
+```
+
+## Output example
+```
+neo@endeavous -> ./opm 
+
+:: loading packages
+   -- packages loaded
+:: extracting packages
+   -- Abstrakt extracted
+   -- packages extracted: 1
+:: downloading Abstrakt
+   -- downloaded
+:: building Abstrakt
+```
+
 ## Packages format
 
 - [X] : `name: package name`
